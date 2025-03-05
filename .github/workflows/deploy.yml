@@ -2,6 +2,7 @@ name: Deploy to bunny
  
 on:
   workflow_dispatch:
+  push:
 
 jobs:
   upload:
