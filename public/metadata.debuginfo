@@ -1,0 +1,5 @@
+[Runtime]
+name=app.zen_browser.Twilight.Debug
+
+[ExtensionOf]
+ref=app/app.zen_browser.Twilight/x86_64/master

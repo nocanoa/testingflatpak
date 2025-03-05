@@ -1,0 +1,45 @@
+[Application]
+name=app.zen_browser.Twilight
+runtime=org.freedesktop.Platform/x86_64/24.08
+sdk=org.freedesktop.Sdk/x86_64/24.08
+base=app/org.mozilla.firefox.BaseApp/x86_64/24.08
+command=launch-script.sh
+
+[Context]
+shared=network;ipc;
+sockets=x11;wayland;pulseaudio;fallback-x11;pcsc;cups;
+devices=all;
+filesystems=xdg-download;
+persistent=.zen;
+
+[Session Bus Policy]
+org.mpris.MediaPlayer2.firefox.*=own
+org.freedesktop.ScreenSaver=talk
+org.a11y.Bus=talk
+org.mozilla.zen.*=own
+org.freedesktop.FileManager1=talk
+
+[System Bus Policy]
+org.freedesktop.NetworkManager=talk
+
+[Environment]
+GTK_PATH=/app/lib/gtkmodules
+MESA_SHADER_CACHE_DIR=$XDG_RUNTIME_DIR/app/$FLATPAK_ID/cache/mesa_shader_cache_db
+
+[Extension org.freedesktop.Platform.ffmpeg-full]
+directory=lib/ffmpeg
+add-ld-path=.
+version=24.08
+
+[Extension app.zen_browser.Twilight.Locale]
+directory=share/runtime/locale
+autodelete=true
+locale-subset=true
+
+[Extension app.zen_browser.Twilight.Debug]
+directory=lib/debug
+autodelete=true
+no-autodownload=true
+
+[Build]
+built-extensions=app.zen_browser.Twilight.Locale;app.zen_browser.Twilight.Debug;
