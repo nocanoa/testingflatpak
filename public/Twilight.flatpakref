@@ -1,0 +1,11 @@
+[Flatpak Ref]
+Title=Twilight
+Name=app.zen_browser.Twilight
+Branch=main
+Url=https://flatpakremote.b-cdn.net/
+SuggestRemoteName=twilight
+Homepage=https://zen-browser.app
+Icon=https://github.com/zen-browser/branding/blob/4b99730c9d3c8fe3ec71d31a07e74cfd488fc27f/Official/SVG/Zen-Color-Twilight.svg
+RuntimeRepo=https://dl.flathub.org/repo/flathub.flatpakrepo
+IsRuntime=false
+GPGKey=
